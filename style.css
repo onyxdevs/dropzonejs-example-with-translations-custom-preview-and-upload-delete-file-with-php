@@ -3,13 +3,12 @@
 /*
 
 Nugget Name: Onyx - DropzoneJS example with everything you will need, translations, custom preview and a powerful PHP code to handle upload/delete file
-Nugget URI: http://www.onyxdev.net/
+Nugget URL: https://github.com/onyxdevs/dropzonejs-example-with-translations-custom-preview-and-upload-delete-file-with-php
 Author: Obada Qawwas
-Author URI: http://www.onyxdev.net/
+Author URL: http://www.onyxdev.net/
 Version: 1.0
 
 */
-
 
 /************************************************************
 
@@ -19,20 +18,20 @@ Version: 1.0
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
     text-rendering: optimizeLegibility;
     background-color: #29323c;
 }
 
 body {
-	background-color: #fff;
-	font-family: 'Open Sans', Arial, sans-serif;
-	letter-spacing: normal;
+    background-color: #fff;
+    font-family: 'Open Sans', Arial, sans-serif;
+    letter-spacing: normal;
     line-height: 1.5;
     overflow-x: hidden;
     font-size: 14px;
-    color: rgba(255, 255, 255, .5);
-    letter-spacing: .25px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.25px;
 
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
@@ -44,7 +43,7 @@ body {
 a,
 a:hover,
 a:focus {
-	text-decoration: none;
+    text-decoration: none;
 }
 a:focus,
 a:hover,
@@ -54,7 +53,7 @@ button:hover {
     color: #fff;
 }
 button {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 * {
@@ -63,13 +62,16 @@ button {
 }
 
 ::selection {
-    background: #e84158; color: #ffffff;
+    background: #e84158;
+    color: #ffffff;
 }
 ::-moz-selection {
-    background: #e84158; color: #ffffff;
+    background: #e84158;
+    color: #ffffff;
 }
 ::-webkit-selection {
-    background: #e84158; color: #ffffff;
+    background: #e84158;
+    color: #ffffff;
 }
 
 h1,
@@ -90,8 +92,6 @@ h6 > span:first-of-type {
     font-weight: 300;
 }
 
-
-
 /************************************************************
 
     Common styles
@@ -105,18 +105,17 @@ h6 > span:first-of-type {
 .file-item .fake button i,
 .remove-file:before,
 .files-container {
-    -webkit-transition: all .15s ease-in-out;
-       -moz-transition: all .15s ease-in-out;
-        -ms-transition: all .15s ease-in-out;
-         -o-transition: all .15s ease-in-out;
-            transition: all .15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
-
 
 /* Content
 *************************************/
 .section-sub-title {
-    font-family: "Montserrat", Arial, Sans-serif;
+    font-family: 'Montserrat', Arial, Sans-serif;
     font-size: 18px;
     line-height: 1.35;
     text-transform: capitalize;
@@ -125,14 +124,11 @@ h6 > span:first-of-type {
     text-align: center;
 }
 
-
-
 /************************************************************
 
     Sections
 
 *************************************************************/
-
 
 /* Wrapper
 *************************************/
@@ -146,11 +142,9 @@ h6 > span:first-of-type {
 *************************************/
 .full-dark-bg {
     margin: 5% auto;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, 0.25);
     padding: 5%;
 }
-
-
 
 /************************************************************
 
@@ -172,13 +166,12 @@ h6 > span:first-of-type {
     margin-top: 35px;
 }
 
-
 /* Upload files
 *************************************/
 .files-container {
     position: relative;
     margin: 30px 2px 15px 2px;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .files-container span {
     display: block;
@@ -190,35 +183,35 @@ h6 > span:first-of-type {
 
 /*** Dropzone ***/
 .files-container.hover {
-    background-color: rgba(255, 255, 255, .1);
-    border: 1px dashed rgba(255, 255, 255, .5);
-    color: rgba(255, 255, 255, .85);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
 }
 .files-container {
     position: relative;
     border: 1px dashed rgba(255, 255, 255, 0.25);
     min-height: auto;
 }
-.files-container #upload-label{
-  background: rgba(231, 97, 92, 0);
-  color: #fff;
-  position: absolute;
-  height: 115px;
-  top: 20%;
-  left: 0;
-  right: 0;
-  margin-right: auto;
-  margin-left: auto;
-  min-width: 20%;
-  text-align: center;
-  cursor: pointer;
+.files-container #upload-label {
+    background: rgba(231, 97, 92, 0);
+    color: #fff;
+    position: absolute;
+    height: 115px;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 20%;
+    text-align: center;
+    cursor: pointer;
 }
-.files-container.active{
-  background: #fff;
+.files-container.active {
+    background: #fff;
 }
-.files-container.active #upload-label{
-  background: #fff;
-  color: #e7615c;
+.files-container.active #upload-label {
+    background: #fff;
+    color: #e7615c;
 }
 
 .files-container #upload-label i:hover {
@@ -227,10 +220,10 @@ h6 > span:first-of-type {
     -webkit-transition: width 2s;
 }
 
-.files-container #upload-label span.title{
-  font-size: 1em;
-  font-weight: bold;
-  display: block;
+.files-container #upload-label span.title {
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
 }
 
 span.tittle {
@@ -239,7 +232,7 @@ span.tittle {
     color: #bdbdbd;
 }
 
-.files-container #upload-label i{
+.files-container #upload-label i {
     text-align: center;
     display: block;
     color: #e7615c;
@@ -296,7 +289,6 @@ span.tittle {
     align-items: flex-start;
 }
 
-
 /* Uploaded files
 *************************************/
 .no-files-uploaded {
@@ -305,11 +297,11 @@ span.tittle {
 
 .uploaded-files {
     margin-top: 10px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .uploaded-files span,
 .uploaded-files a {
-    color: rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 14px;
 }
 .uploaded-files a:hover {
@@ -321,7 +313,6 @@ span.tittle {
     font-size: 12px;
     color: #de1500;
 }
-
 
 /* File types
 *************************************/
@@ -356,7 +347,6 @@ div.type-zip .thumb-container:after {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1NiA1NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTYgNTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojNTU2MDgwO30uc3Qxe2ZpbGw6IzNGNDg1RTt9LnN0MntmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTM3LDBIOEM3LjIsMCw2LjUsMC43LDYuNSwxLjlWNTVjMCwwLjMsMC43LDEsMS41LDFINDhjMC44LDAsMS41LTAuNywxLjUtMVYxM2MwLTAuNy0wLjEtMC45LTAuMy0xLjFMMzcuNiwwLjNDMzcuNCwwLjEsMzcuMiwwLDM3LDB6Ii8+PHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIzNy41LDAuMiAzNy41LDEyIDQ5LjMsMTIgIi8+PGc+PHBhdGggY2xhc3M9InN0MiIgZD0iTTI0LjksMjV2MS4zbC00LjgsNy4ybC0wLjMsMC4yaDUuMVYzNWgtNi43di0xLjNsNC44LTcuMmwwLjMtMC4yaC01LjFWMjVIMjQuOXoiLz48cGF0aCBjbGFzcz0ic3QyIiBkPSJNMjguOSwzNWgtMS43VjI1aDEuN1YzNXoiLz48cGF0aCBjbGFzcz0ic3QyIiBkPSJNMzMsMzVoLTEuNlYyNWgyLjljMC40LDAsMC45LDAuMSwxLjMsMC4yczAuOCwwLjMsMS4xLDAuNmMwLjMsMC4zLDAuNiwwLjYsMC44LDFzMC4zLDAuOCwwLjMsMS4zYzAsMC41LTAuMSwxLTAuMywxLjRjLTAuMiwwLjQtMC40LDAuOC0wLjcsMWMtMC4zLDAuMy0wLjcsMC41LTEuMSwwLjdzLTAuOSwwLjItMS40LDAuMkgzM0wzMywzNUwzMywzNXogTTMzLDI2LjJ2NGgxLjVjMC4yLDAsMC40LDAsMC42LTAuMWMwLjItMC4xLDAuNC0wLjIsMC41LTAuM3MwLjMtMC40LDAuNC0wLjZzMC4yLTAuNiwwLjItMWMwLTAuMiwwLTAuNC0wLjEtMC42YzAtMC4yLTAuMS0wLjQtMC4zLTAuNmMtMC4xLTAuMi0wLjMtMC40LTAuNi0wLjVzLTAuNi0wLjItMS0wLjJMMzMsMjYuMkwzMywyNi4yeiIvPjwvZz48L3N2Zz4=);
 }
 
-
 /* Warnings
 *************************************/
 #warnings {
@@ -366,6 +356,6 @@ div.type-zip .thumb-container:after {
 #warnings span {
     display: block;
     padding: 15px 20px;
-    border: 1px solid rgba(255, 255, 255, .05);
-    background-color: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05);
 }
