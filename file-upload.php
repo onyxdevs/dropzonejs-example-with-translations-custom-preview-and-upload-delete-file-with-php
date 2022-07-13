@@ -7,7 +7,7 @@
 
 // Check if the request is for deleting or uploading
 $delete_file = 0;
-if(isset($_POST['delete_file'])){ 
+if ( isset($_POST['delete_file']) ) {
     $delete_file = $_POST['delete_file'];
 }
 
@@ -82,7 +82,15 @@ if ( !empty($_FILES) && $delete_file == 0 ) {
 
 
 // Remove file
-if( $delete_file == 1 ){
+if ( $delete_file == 1 ) {
+    if ( ! isset( $_POST['target_file'] ) ) {
+        $response = array (
+            'status' => 'error',
+            'info'   => 'target_file is not valid!'
+        );
+        echo json_encode($response);
+    }
+
     $file_path = $_POST['target_file'];
 
     // Check if file is exists
