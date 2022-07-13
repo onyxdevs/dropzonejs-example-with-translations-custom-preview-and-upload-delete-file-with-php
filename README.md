@@ -33,3 +33,5 @@ You can read it’s docs on their website [http://www.dropzonejs.com/](http://ww
 [Bootstrap](https://getbootstrap.com/)<br />
 [Font Awesome](http://fontawesome.io/)<br />
 [Open Sans font](https://fonts.google.com/specimen/Open+Sans)
+
+## `Stay safe 😷`
